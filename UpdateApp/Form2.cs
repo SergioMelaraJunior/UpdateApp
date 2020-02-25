@@ -80,19 +80,32 @@ namespace UpdateApp
             command.Parameters.Add("@CODCON", SqlDbType.Int).Value = txbCODCON.Text;
             command.Parameters.Add("@SERCON", SqlDbType.VarChar).Value = txbSERCON.Text;
             command.Parameters.Add("@CODFIL", SqlDbType.SmallInt).Value = txbCODFIL.Text;
-            if(txbCODMOT.Text == "")
+            command.Parameters.Add("@CODMOT", SqlDbType.Int).Value = txbCODMOT.Text;
+            if (txbCODMO2.Text == "")
             {
-                command.Parameters.Add("@CODMOT", DBNull.Value).Value = DBNull.Value;
-
-               // SqlCommand cmd = new SqlCommand ("update rodcon set CODMOT = NULL WHERE CODCON=@CODCON and sercon=@SERCON and codfil=@CODFIL", sql);
-                
+                command.Parameters.AddWithValue("@CODMO2", DBNull.Value);
             }
-            else command.Parameters.Add("@CODMOT", SqlDbType.Int).Value = txbCODMOT.Text;
-            command.Parameters.Add("@CODMO2", SqlDbType.Int).Value = txbCODMO2.Text;
-            command.Parameters.Add("@CODMO3", SqlDbType.Int).Value = txbCODMO3.Text;
+            else command.Parameters.Add("@CODMO2", SqlDbType.Int).Value = txbCODMO2.Text;
+
+            if (txbCODMO3.Text == "")
+            {
+                command.Parameters.AddWithValue("@CODMO3", DBNull.Value);
+            }
+            else command.Parameters.Add("@CODMO3", SqlDbType.Int).Value = txbCODMO3.Text;
+            
             command.Parameters.Add("@PERCOM", SqlDbType.Decimal).Value = txbPERCOM.Text;
-            command.Parameters.Add("@PERCO2", SqlDbType.Decimal).Value = txbPERCO2.Text;
-            command.Parameters.Add("@PERCO3", SqlDbType.Decimal).Value = txbPERCO3.Text;
+
+            if (txbPERCO2.Text == "")
+            {
+                command.Parameters.AddWithValue("@PERCO2", DBNull.Value);
+            }
+            else command.Parameters.Add("@PERCO2", SqlDbType.Decimal).Value = txbPERCO2.Text;
+
+            if (txbPERCO3.Text == "")
+            {
+                command.Parameters.AddWithValue("@PERCO3", DBNull.Value);
+            }
+            else command.Parameters.Add("@PERCO3", SqlDbType.Decimal).Value = txbPERCO3.Text;
 
             if (txbCODCON.Text != "" & txbSERCON.Text != "" & txbCODFIL.Text != "")
             {
