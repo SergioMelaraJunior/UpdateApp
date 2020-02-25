@@ -85,27 +85,39 @@ namespace UpdateApp
             {
                 command.Parameters.AddWithValue("@CODMO2", DBNull.Value);
             }
-            else command.Parameters.Add("@CODMO2", SqlDbType.Int).Value = txbCODMO2.Text;
+            else
+            {
+                command.Parameters.Add("@CODMO2", SqlDbType.Int).Value = txbCODMO2.Text;
+            }
 
             if (txbCODMO3.Text == "")
             {
                 command.Parameters.AddWithValue("@CODMO3", DBNull.Value);
             }
-            else command.Parameters.Add("@CODMO3", SqlDbType.Int).Value = txbCODMO3.Text;
-            
+            else
+            {
+                command.Parameters.Add("@CODMO3", SqlDbType.Int).Value = txbCODMO3.Text;
+            }
+
             command.Parameters.Add("@PERCOM", SqlDbType.Decimal).Value = txbPERCOM.Text;
 
             if (txbPERCO2.Text == "")
             {
                 command.Parameters.AddWithValue("@PERCO2", DBNull.Value);
             }
-            else command.Parameters.Add("@PERCO2", SqlDbType.Decimal).Value = txbPERCO2.Text;
+            else
+            {
+                command.Parameters.Add("@PERCO2", SqlDbType.Decimal).Value = txbPERCO2.Text;
+            }
 
             if (txbPERCO3.Text == "")
             {
                 command.Parameters.AddWithValue("@PERCO3", DBNull.Value);
             }
-            else command.Parameters.Add("@PERCO3", SqlDbType.Decimal).Value = txbPERCO3.Text;
+            else
+            {
+                command.Parameters.Add("@PERCO3", SqlDbType.Decimal).Value = txbPERCO3.Text;
+            }
 
             if (txbCODCON.Text != "" & txbSERCON.Text != "" & txbCODFIL.Text != "")
             {
@@ -135,7 +147,10 @@ namespace UpdateApp
                     sql.Close();
                 }
             }
-            else MessageBox.Show("Digite os Campos Obrigatórios (*) ", "UpdateApp - Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                MessageBox.Show("Digite os Campos Obrigatórios (*) ", "UpdateApp - Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
