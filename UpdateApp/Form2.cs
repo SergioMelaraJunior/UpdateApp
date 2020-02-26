@@ -152,5 +152,10 @@ namespace UpdateApp
                 MessageBox.Show("Digite os Campos Obrigatórios (*) ", "UpdateApp - Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Form2(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

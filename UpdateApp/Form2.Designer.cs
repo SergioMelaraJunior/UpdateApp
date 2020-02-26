@@ -57,9 +57,9 @@
             this.CODMOT.AutoSize = true;
             this.CODMOT.Location = new System.Drawing.Point(12, 32);
             this.CODMOT.Name = "CODMOT";
-            this.CODMOT.Size = new System.Drawing.Size(79, 13);
+            this.CODMOT.Size = new System.Drawing.Size(106, 13);
             this.CODMOT.TabIndex = 0;
-            this.CODMOT.Text = "COD. Motorista";
+            this.CODMOT.Text = "COD. Motorista Atual";
             // 
             // CODMO2
             // 
@@ -147,6 +147,7 @@
             // 
             // txbCODMOT
             // 
+            this.txbCODMOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txbCODMOT.Location = new System.Drawing.Point(119, 25);
             this.txbCODMOT.Name = "txbCODMOT";
             this.txbCODMOT.Size = new System.Drawing.Size(100, 20);
@@ -168,6 +169,7 @@
             // 
             // txbPERCOM
             // 
+            this.txbPERCOM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txbPERCOM.Location = new System.Drawing.Point(119, 167);
             this.txbPERCOM.Name = "txbPERCOM";
             this.txbPERCOM.Size = new System.Drawing.Size(100, 20);
@@ -192,30 +194,31 @@
             this.CODCON.AutoSize = true;
             this.CODCON.Location = new System.Drawing.Point(394, 32);
             this.CODCON.Name = "CODCON";
-            this.CODCON.Size = new System.Drawing.Size(57, 13);
+            this.CODCON.Size = new System.Drawing.Size(40, 13);
             this.CODCON.TabIndex = 15;
-            this.CODCON.Text = "CODCON*";
+            this.CODCON.Text = "CTRC*";
             // 
             // SERCON
             // 
             this.SERCON.AutoSize = true;
             this.SERCON.Location = new System.Drawing.Point(394, 75);
             this.SERCON.Name = "SERCON";
-            this.SERCON.Size = new System.Drawing.Size(56, 13);
+            this.SERCON.Size = new System.Drawing.Size(43, 13);
             this.SERCON.TabIndex = 16;
-            this.SERCON.Text = "SERCON*";
+            this.SERCON.Text = "SÉRIE*";
             // 
             // CODFIL
             // 
             this.CODFIL.AutoSize = true;
             this.CODFIL.Location = new System.Drawing.Point(394, 125);
             this.CODFIL.Name = "CODFIL";
-            this.CODFIL.Size = new System.Drawing.Size(49, 13);
+            this.CODFIL.Size = new System.Drawing.Size(42, 13);
             this.CODFIL.TabIndex = 17;
-            this.CODFIL.Text = "CODFIL*";
+            this.CODFIL.Text = "FILIAL*";
             // 
             // txbCODCON
             // 
+            this.txbCODCON.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txbCODCON.Location = new System.Drawing.Point(477, 25);
             this.txbCODCON.Name = "txbCODCON";
             this.txbCODCON.Size = new System.Drawing.Size(100, 20);
@@ -223,6 +226,7 @@
             // 
             // txbSERCON
             // 
+            this.txbSERCON.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txbSERCON.Location = new System.Drawing.Point(477, 68);
             this.txbSERCON.Name = "txbSERCON";
             this.txbSERCON.Size = new System.Drawing.Size(100, 20);
@@ -230,6 +234,7 @@
             // 
             // txbCODFIL
             // 
+            this.txbCODFIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txbCODFIL.Location = new System.Drawing.Point(477, 118);
             this.txbCODFIL.Name = "txbCODFIL";
             this.txbCODFIL.Size = new System.Drawing.Size(100, 20);
@@ -265,6 +270,7 @@
             this.Name = "frmUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateApp";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2);
             this.ResumeLayout(false);
             this.PerformLayout();
 
